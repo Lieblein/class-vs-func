@@ -1,13 +1,11 @@
 {
-  "name": "react-redux-stub",
+  "name": "class-vs-func",
   "version": "0.0.1",
-  "description": "react-redux stub",
+  "description": "class vs func",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development node start.js",
     "precommit": "lint-staged",
-    "test": "jest --silent",
-    "test-log": "jest",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-js": "eslint ./src/ --ext .js,.jsx",
     "lint-css": "stylelint ./src/**/*.{css,pcss}",
@@ -21,22 +19,10 @@
     "src/**/*.{css,pcss}": "stylelint"
   },
   "author": {
-    "name": "Boris Lazarev",
-    "email": "lbp@htc-cs.ru"
+    "name": "Liubov Lozhkina",
+    "email": "lla@htc-cs.ru"
   },
   "maintainers": [
-    {
-      "name": "Boris Lazarev",
-      "email": "lbp@htc-cs.ru"
-    },
-    {
-      "name": "Egor Konovalov",
-      "email": "ekonovalov@htc-cs.ru"
-    },
-    {
-      "name": "Kirill Baymachev",
-      "email": "kbaymachev@htc-cs.ru"
-    },
     {
       "name": "Liubov Lozhkina",
       "email": "lla@htc-cs.ru"
@@ -58,7 +44,6 @@
     "autoprefixer": "^9.1.5",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.0-beta.6",
     "babel-plugin-minify-constant-folding": "^0.5.0",
     "babel-plugin-minify-type-constructors": "^0.4.3",
@@ -70,8 +55,6 @@
     "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
-    "enzyme": "^3.5.1",
-    "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.11.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -83,12 +66,10 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
-    "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "^4.3.1",
     "jest": "^23.6.0",
     "lint-staged": "^4.3.0",
     "mini-css-extract-plugin": "^0.4.2",
-    "node-noop": "^1.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "path": "^0.12.7",
     "postcss-calc": "^6.0.2",
@@ -99,8 +80,6 @@
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^4.1.0",
     "postcss-url": "^8.0.0",
-    "prettier": "^1.10.1",
-    "prettier-eslint": "^6.3.0",
     "prop-types": "^15.6.2",
     "react-hot-loader": "^4.3.11",
     "regenerator-runtime": "^0.13.1",
@@ -118,20 +97,14 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "bem-cn": "^2.1.3",
-    "lodash": "^4.17.3",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-redux": "^5.0.1",
-    "react-router-dom": "^4.0.0",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0",
-    "resolve-url": "^0.2.1",
-    "superagent": "^3.3.1",
-    "superagent-promise-plugin": "^3.2.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "resolve-url": "^0.2.1"
   },
   "engines": {
     "node": ">= 6.9.2",
     "yarn": ">= 1.3.2"
   },
-  "repository": "https://gitlab.htc-cs.com/frontend/stubs/react-redux"
+  "repository": "https://github.com/Lieblein/class-vs-func"
 }
