@@ -1,34 +1,23 @@
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { hot } from 'react-hot-loader'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { AppContainer } from 'react-hot-loader'
 
 import App from './components/App';
 
 const mountNode = document.getElementById('react-app');
-
-class Application extends React.Component {
-    render() {
-        return (
-            <BrowserRouter basename='/'>
-                <App />
-            </BrowserRouter>
-        );
-    }
+function renderApplication(Component) {
+    ReactDOM.render(<Component />, mountNode);
 }
 
-const renderApplication = Component => {
-    ReactDOM.render(
-        <AppContainer>
-            <Component />
-        </AppContainer>,
-        mountNode
-    );
-}
-
-renderApplication(Application);
+renderApplication(App);
 
 if (module.hot) {
-    module.hot.accept('./components/App', () => { renderApplication(Application) });
+    module.hot.accept(
+        './components/App',
+        function () {
+            // TODO не работает, разобраться
+            renderApplication(hot(App));
+        }
+    );
 }

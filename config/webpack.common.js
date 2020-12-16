@@ -25,7 +25,10 @@ const webpackConfig = function (options) {
             modules: [
                 helpers.root('src'),
                 'node_modules'
-            ]
+            ],
+            alias: {
+                'react-dom': '@hot-loader/react-dom'
+            }
         },
         module: {
             rules: [

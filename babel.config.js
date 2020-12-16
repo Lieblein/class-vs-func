@@ -35,6 +35,8 @@ if (process.env.ENV === "production") {
         "@babel/plugin-transform-react-inline-elements",
         "babel-plugin-transform-react-remove-prop-types"
     ].forEach(plugin => plugins.push(plugin));
+} else {
+    plugins.push("react-hot-loader/babel");
 }
 
 module.exports = { presets, plugins };
