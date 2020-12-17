@@ -13,7 +13,9 @@ export default function PageFunc() {
 
     useEffect(() => {
         window.addEventListener('scroll', onScroll);
-        return window.removeEventListener('scroll', onScroll);
+        return function () {
+            window.removeEventListener('scroll', onScroll);
+        };
     });  
 
     return (
