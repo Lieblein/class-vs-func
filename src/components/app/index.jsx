@@ -6,12 +6,16 @@ import PageBigClass from '../PageBigClass';
 import PageFunc from '../PageFunc';
 import PageHOC from '../PageHOC';
 import PageHook from '../PageHook';
+import PageDecorator from '../PageDecorator';
+import PageRenderProps from '../PageRenderProps';
 import PageError from '../PageError';
 import {
     BIG_CLASS_PAGE_ROUTE,
     FUNCTION_PAGE_ROUTE,
     HOC_PAGE_ROUTE,
-    HOOK_PAGE_ROUTE
+    HOOK_PAGE_ROUTE,
+    RENDER_PROPS_PAGE_ROUTE,
+    DECORATOR_PAGE_ROUTE
 } from '../../constants/routes';
 import './app.pcss';
 import './nav.pcss';
@@ -26,6 +30,8 @@ export default class App extends React.Component {
                         <Link className='nav__link' to={ FUNCTION_PAGE_ROUTE }>Большая функция</Link>
                         <Link className='nav__link' to={ HOC_PAGE_ROUTE }>HOC</Link>
                         <Link className='nav__link' to={ HOOK_PAGE_ROUTE }>Hook</Link>
+                        <Link className='nav__link' to={ RENDER_PROPS_PAGE_ROUTE }>Render props</Link>
+                        <Link className='nav__link' to={ DECORATOR_PAGE_ROUTE }>Decorator</Link>
                     </nav>
                     <div className='app__content'>
                         <Switch>
@@ -48,6 +54,16 @@ export default class App extends React.Component {
                                 exact={ true }
                                 path={ HOOK_PAGE_ROUTE }
                                 component={ PageHook }
+                            />
+                            <Route
+                                exact={ true }
+                                path={ RENDER_PROPS_PAGE_ROUTE }
+                                component={ PageRenderProps }
+                            />
+                            <Route
+                                exact={ true }
+                                path={ DECORATOR_PAGE_ROUTE }
+                                component={ PageDecorator }
                             />
                             <Route
                                 path='*'
