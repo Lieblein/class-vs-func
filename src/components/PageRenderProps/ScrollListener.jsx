@@ -23,10 +23,6 @@ export default class ScrollListener extends React.Component {
     render() {
         const { render } = this.props;
         const { isBelowScrollTarget } = this.state;
-        return (
-            <>
-                {render(isBelowScrollTarget)}
-            </>
-        );
+        return render(isBelowScrollTarget);
     }
 }
