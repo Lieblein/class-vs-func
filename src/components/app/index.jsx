@@ -5,8 +5,14 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import PageBigClass from '../PageBigClass';
 import PageFunc from '../PageFunc';
 import PageHOC from '../PageHOC';
+import PageHook from '../PageHook';
 import PageError from '../PageError';
-import { BIG_CLASS_PAGE_ROUTE, FUNCTION_PAGE_ROUTE, HOC_PAGE_ROUTE } from '../../constants/routes';
+import {
+    BIG_CLASS_PAGE_ROUTE,
+    FUNCTION_PAGE_ROUTE,
+    HOC_PAGE_ROUTE,
+    HOOK_PAGE_ROUTE
+} from '../../constants/routes';
 import './app.pcss';
 import './nav.pcss';
 
@@ -19,6 +25,7 @@ export default class App extends React.Component {
                         <Link className='nav__link' to={ BIG_CLASS_PAGE_ROUTE }>Большой класс</Link>
                         <Link className='nav__link' to={ FUNCTION_PAGE_ROUTE }>Большая функция</Link>
                         <Link className='nav__link' to={ HOC_PAGE_ROUTE }>HOC</Link>
+                        <Link className='nav__link' to={ HOOK_PAGE_ROUTE }>Hook</Link>
                     </nav>
                     <div className='app__content'>
                         <Switch>
@@ -36,6 +43,11 @@ export default class App extends React.Component {
                                 exact={ true }
                                 path={ HOC_PAGE_ROUTE }
                                 component={ PageHOC }
+                            />
+                            <Route
+                                exact={ true }
+                                path={ HOOK_PAGE_ROUTE }
+                                component={ PageHook }
                             />
                             <Route
                                 path='*'
