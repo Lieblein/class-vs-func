@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
 export default function useScrollListener(scrollPixelTarget) {
-    const [showButton, setShowButton] = useState(false);
+    const [isBelowScrollTarget, setIsBelowScrollTarget] = useState(false);
 
     function onScroll() {
-        const showButton = window.pageYOffset > scrollPixelTarget;
-        setShowButton(showButton);
+        const isBelowScrollTarget = window.pageYOffset > scrollPixelTarget;
+        setIsBelowScrollTarget(isBelowScrollTarget);
     }
 
     useEffect(() => {
@@ -15,5 +15,5 @@ export default function useScrollListener(scrollPixelTarget) {
         };
     });
 
-    return showButton;
+    return isBelowScrollTarget;
 }
