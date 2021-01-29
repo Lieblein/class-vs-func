@@ -9,6 +9,11 @@ export default class PageExtends extends ComponentWithScrollListener {
         super(TOP_SCROLL_OFFSET);
     }
 
+    componentDidMount() {
+        ComponentWithScrollListener.prototype.componentDidMount.call(this);
+        console.log('shit happens');
+    }
+
     render() {
         const { isBelowScrollTarget } = this.state;
         return (
